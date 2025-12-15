@@ -1,0 +1,17 @@
+import pygame
+from settings import *
+
+class Map:
+    def __init__(self, map_walls = [[0 for i in range(GRID_WIDTH)] for j in range(GRID_HEIGHT)]):
+        self.map_walls = map_walls
+
+    def is_wall(self, cell_x, cell_y):
+        return self.map_walls[cell_x][cell_y] == 1
+
+
+
+map_diningroom = Map()
+print(map_diningroom.is_wall(3, 4))
+
+map_kitchen = [[0 for i in range(GRID_WIDTH)] for j in range(GRID_HEIGHT)]
+
